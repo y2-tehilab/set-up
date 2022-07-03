@@ -1,0 +1,8 @@
+{
+  "singleQuote": true,
+  "extands": [
+    "eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ]
+}
