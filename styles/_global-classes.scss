@@ -17,3 +17,33 @@
   line-height: 1.28571429em;
   font-size: 14px;
 }
+
+.simplePopup {
+  &.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+
+  &.ReactModal__Overlay--after-open {
+    opacity: 1;
+  }
+
+  &.ReactModal__Overlay--before-close {
+    opacity: 0;
+  }
+}
+
+.notification {
+  &.ReactModal__Overlay {
+    transition: transform 300ms;
+    transform: translateX(100%);
+  }
+
+  &.ReactModal__Overlay--after-open {
+    transform: none;
+  }
+
+  &.ReactModal__Overlay--before-close {
+    transform: translateX(100%);
+  }
+}

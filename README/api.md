@@ -14,12 +14,14 @@
 
 - In order to call api:
 
-```jsx
-import { getEntry } from '../../services/api';
+  ```jsx
+  import { getEntry } from '../../services/api';
 
-useEffect(() => {
+  useEffect(() => {
     const initEntry = async () => {
       const entryByQuery = await getEntry(router.query.id);
       setEntry(entryByQuery);
     };
-```
+    initEntry();
+  }, []);
+  ```
