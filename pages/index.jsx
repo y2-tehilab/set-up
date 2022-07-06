@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import BasicForm from '../components/basic-form/basic-form';
 import LoginStatus from '../components/login-status/login-status';
 import Notification from '../components/popups/notification/notification';
 import SimplePopup from '../components/popups/simple-popup/simple-popup';
@@ -29,6 +30,7 @@ export default function Home() {
       <Notification ref={notificationRef}>
         <p>Modal Content</p>
       </Notification>
+      <BasicForm />
     </div>
   );
 }

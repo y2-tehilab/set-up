@@ -1,0 +1,35 @@
+.textInput {
+  display: flex;
+  flex-direction: column;
+
+  .labelText {
+    font-size: 16px;
+  }
+
+  .validationMessage {
+    color: #ff2a2b;
+    font-size: 14px;
+  }
+
+  .input {
+    margin-top: 5px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    height: 36px;
+    width: 200px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: $white;
+    font-size: 16px;
+
+    &:disabled {
+      background-color: #f9f9f9;
+    }
+    &:focus {
+      outline: none;
+    }
+    &.invalid {
+      border: 1px solid #ff2a2b;
+    }
+  }
+}

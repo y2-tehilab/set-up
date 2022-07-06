@@ -32,4 +32,8 @@
 
 - Auth - `auth.md`
 
+- Popups - `popups.md`
+
+- Forms - `forms.md`
+
 Todo - implement missing guides: inputs, popups in two types, maybe use with bootstrap?.
