@@ -20,16 +20,23 @@ export default function Home() {
   return (
     <div className={styles.home}>
       <h1>Set up project !!</h1>
+
+      <strong>Use Mobx state:</strong>
       <LoginStatus />
+
+      <strong>Popup:</strong>
       <button onClick={openPopup}>open popup</button>
       <SimplePopup ref={popupRef} closeAfterMS={5000}>
         <p>Modal Content</p>
       </SimplePopup>
 
+      <strong>Notification:</strong>
       <button onClick={openNotification}>open notification</button>
       <Notification ref={notificationRef}>
         <p>Modal Content</p>
       </Notification>
+
+      <strong>Forms:</strong>
       <BasicForm />
     </div>
   );

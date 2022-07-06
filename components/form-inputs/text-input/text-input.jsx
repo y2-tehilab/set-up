@@ -10,6 +10,7 @@ export default function TextInput({
   placeholder,
   value = '',
   validationMessage = '',
+  type = 'text',
 }) {
   return (
     <label className={styles.textInput}>
@@ -20,6 +21,7 @@ export default function TextInput({
         placeholder={placeholder}
         disabled={disabled}
         defaultValue={value}
+        type={type}
       />
       {isInvalid && (
         <span className={styles.validationMessage}>

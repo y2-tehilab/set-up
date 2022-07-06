@@ -1,3 +1,11 @@
 .home {
   background-color: $white;
+
+  strong {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    text-decoration: underline;
+  }
 }
