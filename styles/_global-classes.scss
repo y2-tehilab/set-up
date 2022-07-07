@@ -6,18 +6,6 @@
   padding: 0 30px;
 }
 
-.input {
-  color: #000000;
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  border: 1px solid #72777d;
-  border-radius: 2px;
-  padding: 6px 8px;
-  line-height: 1.28571429em;
-  font-size: 14px;
-}
-
 .simplePopup {
   &.ReactModal__Overlay {
     opacity: 0;
@@ -45,5 +33,45 @@
 
   &.ReactModal__Overlay--before-close {
     transform: translateX(100%);
+  }
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+
+  .labelText {
+    font-size: 16px;
+  }
+
+  .validationMessage {
+    color: $rouge;
+    font-size: 14px;
+  }
+
+  .input {
+    margin-top: 5px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    height: 36px;
+    width: 200px;
+    border: 1px solid $pastelGrey;
+    border-radius: 4px;
+    background-color: $white;
+    font-size: 16px;
+
+    &:disabled {
+      background-color: $snow;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.invalid {
+    .input {
+      border: 1px solid $rouge;
+    }
   }
 }

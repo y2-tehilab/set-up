@@ -1,4 +1,4 @@
-import styles from './text-input.module.scss';
+// import styles from './text-input.module.scss';
 
 export default function TextInput({
   register,
@@ -13,10 +13,10 @@ export default function TextInput({
   type = 'text',
 }) {
   return (
-    <label className={styles.textInput}>
-      <span className={styles.labelText}>{title}</span>
+    <label className={`inputBox ${isInvalid && 'invalid'}`}>
+      <span className="labelText">{title}</span>
       <input
-        className={`${styles.input} ${isInvalid && styles.invalid}`}
+        className="input"
         {...register(name, { required: isRequired })}
         placeholder={placeholder}
         disabled={disabled}
@@ -24,7 +24,7 @@ export default function TextInput({
         type={type}
       />
       {isInvalid && (
-        <span className={styles.validationMessage}>
+        <span className="validationMessage">
           {validationMessage || 'שגיאה במילוי השדה'}
         </span>
       )}

@@ -1,0 +1,40 @@
+.toggleBox {
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+
+  .toggle {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 38px;
+    height: 20px;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: $pastelGrey;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-color: $white;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+
+    &:checked {
+      background-color: $oceanBlue;
+
+      &:hover,
+      &:focus {
+        background-color: $darkerOceanBlue;
+      }
+
+      &:before {
+        transform: translateX(100%);
+      }
+    }
+  }
+}
